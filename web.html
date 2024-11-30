@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha Ghasemi</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-image: url('https://example.com/playstation-background.jpg'); /* Link to PlayStation background image */
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: center;
+            color: white;
+        }
+        header {
+            background-color: darkblue;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .portal-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: gold;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .portal-button:hover {
+            background-color: darkgoldenrod;
+        }
+        main {
+            padding: 20px;
+            background-color: rgba(128, 0, 128, 0.8); /* Adding transparency to purple background */
+            margin: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: red;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .search-container {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .search-box {
+            width: 70%;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-right: 10px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease; /* Adding transform transition */
+        }
+        .search-box:focus {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            outline: none;
+            transform: scale(1.05); /* Slight zoom effect on focus */
+        }
+        .search-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Adding transform transition */
+        }
+        .search-button:hover {
+            background-color: blue;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        .translate-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .translate-button {
+            padding: 10px;
+            font-size: 18px;
+            background-color: gold;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Adding transform transition */
+        }
+        .translate-button:hover {
+            background-color: darkgoldenrod;
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        .info-box {
+            background-color: rgba(173, 216, 230, 0.8); /* Adding transparency to light blue background */
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 600px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Taha Ghasemi's Website</h1>
+        <a href="https://www.tabdeal.org" class="portal-button">Exchange</a>
+        <div class="translate-buttons">
+            <button class="translate-button" onclick="translateToFarsi()">ترجمه به فارسی</button>
+            <button class="translate-button" onclick="translateToEnglish()">Translate to English</button>
+        </div>
+    </header>
+    <main>
+        <h2>About Taha Ghasemi</h2>
+        <p>This website is dedicated to introducing Taha Ghasemi and his activities.</p>
+        <h2>Major Names in AI</h2>
+        <ul>
+            <li>OpenAI's GPT</li>
+            <li>Google's BERT</li>
+            <li>IBM's Watson</li>
+            <li>Microsoft Copilot</li>
+        </ul>
+        
+        <div class="search-container">
+            <form action="https://www.google.com/search" method="get">
+                <input type="text" name="q" class="search-box" placeholder="Search...">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+        
+        <div class="info-box" id="electricity-box">
+            <h2>Electricity and Industry</h2>
+            <p>Electricity plays a crucial role in the industry. From energy production to various applications in factories and different industries, electricity is one of the most important factors in industrial progress and development. The electric industry includes the generation, transmission, and distribution of electrical energy used to meet the energy needs of consumers, especially large industries. Technological advances in this field can help improve efficiency, reduce costs, and minimize environmental impacts.</p>
+        </div>
+
+        <div class="info-box" id="crypto-box">
+            <h2>Cryptocurrency Market</h2>
+            <p>The cryptocurrency market is a decentralized and digital market where cryptocurrencies like Bitcoin, Ethereum, and others are traded. Unlike traditional financial markets, it operates 24/7 and is not controlled by any central authority. The prices of cryptocurrencies are highly volatile, influenced by factors such as market demand, investor sentiment, regulatory news, and technological advancements. Investors can buy, sell, or trade cryptocurrencies on various platforms known as exchanges. The market has seen significant growth and interest over the past decade, attracting both retail and institutional investors.</p>
+        </div>
+    </main>
+    <footer>
+        <p>Contact us: 09942877151</p>
+        <p>All legal and intellectual property rights belong to Taha Ghasemi.</p>
+    </footer>
+    <script>
+        function translateToFarsi() {
+            document.querySelector('h1').textContent = 'به وب‌سایت طاها قاسمی خوش آمدید';
+            document.querySelector('h2:nth-of-type(1)').textContent = 'درباره طاها قاسمی';
+            document.querySelector('p:nth-of-type(1)').textContent = 'این وب‌سایت به معرفی طاها قاسمی و فعالیت‌های او اختصاص دارد.';
+            document.querySelector('h2:nth-of-type(2)').textContent = 'نام‌های بزرگ در هوش مصنوعی';
+            document.querySelector('ul li:nth-of-type(1)').textContent = 'GPT از OpenAI';
+            document.querySelector('ul li:nth-of-type(2)').textContent = 'BERT از Google';
+            document.querySelector('ul li:nth-of-type(3)').textContent = 'Watson از IBM';
+            document.querySelector('ul li:nth-of-type(4)').textContent = 'Copilot از Microsoft';
+            document.getElementById('electricity-box').querySelector('h2').textContent = 'برق و صنعت';
+            document.getElementById('electricity-box').querySelector('p').textContent = 'برق نقش بسیار مهمی در صنعت دارد. از تولید انرژی تا کاربردهای مختلف در کارخانجات و صنعت‌های مختلف، برق یکی از مهم‌ترین عوامل در پیشرفت و توسعه صنعتی به شمار می‌رود. صنعت برق شامل تولید، انتقال و توزیع انرژی الکتریکی است که برای تامین نیازهای انرژی مصرف‌کنندگان، به ویژه صنایع بزرگ، استفاده می‌شود. پیشرفت‌های تکنولوژیکی در این زمینه می‌تواند به بهبود بهره‌وری، کاهش هزینه‌ها و کاهش تاثیرات زیست‌محیطی کمک کند.';
+            document.getElementById('crypto-box').querySelector('h2').textContent = 'بازار رمز ارز';
+            document.getElementById('crypto-box').querySelector('p').textContent = 'بازار ارزهای دیجیتال یک بازار غیرمتمرکز و دیجیتالی است که در آن ارزهای دیجیتال مانند بیت کوین، اتریوم و غیره معامله می شوند. برخلاف بازارهای مالی سنتی، 24/7 فعالیت می کند و توسط هیچ مقام مرکزی کنترل نمی شود. قیمت ارزهای دیجیتال بسیار نوسان است و تحت تأثیر عواملی مانند تقاضای بازار، احساسات سرمایه گذاران، اخبار نظارتی و پیشرفت های تکنولوژیکی است. سرمایه گذاران می توانند ارزهای دیجیتال را در پلتفرم های مختلفی که به عنوان صرافی شناخته می شوند، خرید، فروش یا معامله کنند. این بازار در دهه گذشته شاهد رشد و علاقه قابل توجهی بوده است و سرمایه گذاران خرده فروشی و نهادی را به خود جذب کرده است.';
+         }
+    </script>
+ </body>
+ </html>
